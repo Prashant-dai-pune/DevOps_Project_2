@@ -4,4 +4,4 @@
     key_name               = "prashant23Dec24"
     project_name           = "project-2"
     env                    = "dev"
-    unique_ids = ["jenkins-master","jenkins-build-slave","ansible-control-node"]
+    unique_ids = ["jenkins-master","jenkins-build-slave"]

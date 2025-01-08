@@ -33,12 +33,11 @@ variable "env" {
   type        = string
   default     = null
 }
-
-variable "company_name" {
-  description = "company_name "
-  type        = string
-  default     = "FQTS"
-}
+variable "unique_ids" {
+  description = "unique_id "
+  type        = list
+  default     = []
+  }
 
 variable "user_data" {
   description = "user_data "
