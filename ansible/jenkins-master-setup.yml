@@ -28,6 +28,6 @@
         state: started
     
     - name: enable jenkins to start at boot time 
-        service: 
-          name: jenkins 
-          enabled: yes 
+      service: 
+        name: jenkins 
+        enabled: yes
