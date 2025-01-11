@@ -32,10 +32,10 @@
   - name: check version
     shell: git --version
     tags: install_git
-    register: git-version
+    register: git_version
     
   - name: print git version
     debug:
-      var: git-version
+      msg: "{{ git_version.stdout }}"
     tags: install_git
 
