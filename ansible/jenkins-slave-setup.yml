@@ -38,7 +38,8 @@
     debug:
       msg: "{{ git_version.stdout }}"
     tags: install_git
-
+    ignore_errors: yes
+    
   - name: Install Docker
     yum:
       name: docker
