@@ -39,3 +39,14 @@
       msg: "{{ git_version.stdout }}"
     tags: install_git
 
+  - name: Install Docker
+      yum:
+        name: docker
+        state: present
+
+  - name: Start and enable Docker service
+    service:
+      name: docker
+      state: started
+
+
