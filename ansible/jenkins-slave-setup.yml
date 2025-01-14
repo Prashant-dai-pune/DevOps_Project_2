@@ -76,4 +76,19 @@
   - name: start docker on boot time 
     service: 
       name: docker 
-      enabled: yes 
+      enabled: yes
+
+  - name: Download kubectl binary
+    get_url:
+      url: "curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.32.0/2024-12-20/bin/darwin/amd64/kubectl"
+      dest: /usr/local/bin/kubectl
+      mode: '0755'
+
+  - name: Validate kubectl installation
+    command: kubectl version --client
+    register: kubectl_version
+    ignore_errors: no
+
+  - name: Display kubectl version
+    debug:
+      msg: "{{ kubectl_version.stdout }}"
