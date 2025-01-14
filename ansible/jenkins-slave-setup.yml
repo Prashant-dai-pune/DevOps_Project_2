@@ -100,7 +100,7 @@
 
 
   - name: Verify AWS CLI installation
-    command: aws --version
+    command: /usr/local/bin/aws --version
     register: aws_version
 
   - name: Display AWS CLI version
