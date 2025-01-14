@@ -80,7 +80,7 @@
 
   - name: Download kubectl binary
     get_url:
-      url: "curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.32.0/2024-12-20/bin/darwin/amd64/kubectl"
+      url: "https://s3.us-west-2.amazonaws.com/amazon-eks/1.32.0/2024-12-20/bin/darwin/amd64/kubectl"
       dest: /usr/local/bin/kubectl
       mode: '0755'
 
