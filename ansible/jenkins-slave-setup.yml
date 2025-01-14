@@ -107,4 +107,4 @@
 
   - name: Display AWS CLI version
     debug:
-    msg: "Installed AWS CLI version: {{ aws_version.stdout }}"
+      msg: "Installed AWS CLI version: {{ aws_version.stdout }}"
