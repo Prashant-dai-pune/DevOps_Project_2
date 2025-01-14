@@ -85,7 +85,7 @@
       mode: '0755'
 
   - name: Validate kubectl installation
-    shell: kubectl version --client
+    shell: /usr/local/bin/kubectl version --client
     register: kubectl_version
     ignore_errors: no
 
