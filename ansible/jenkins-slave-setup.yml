@@ -117,6 +117,7 @@
   - name: Install Helm
     command: /tmp/get-helm-3
     tags: install_helm
+    ignore_errors: true
 
   - name: Verify Helm installation
     command: helm version
