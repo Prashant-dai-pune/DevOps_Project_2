@@ -112,14 +112,18 @@
       url: https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
       dest: /tmp/get-helm-3
       mode: '0755'
+    tags: install_helm
 
   - name: Install Helm
     command: /tmp/get-helm-3
+    tags: install_helm
 
   - name: Verify Helm installation
     command: helm version
     register: helm_version
+    tags: install_helm
 
   - name: Display Helm version
     debug:
       msg: "Helm installed: {{ helm_version.stdout }}"
+    tags: install_helm
