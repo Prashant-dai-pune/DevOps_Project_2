@@ -120,7 +120,7 @@
     ignore_errors: true
 
   - name: Verify Helm installation
-    command: helm version
+    command: /usr/local/bin/helm version
     register: helm_version
     tags: install_helm
 
